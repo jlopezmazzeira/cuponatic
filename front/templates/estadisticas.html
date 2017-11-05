@@ -1,0 +1,33 @@
+<div class="row" style="margin-bottom:10px;">
+    <div class="col-md-12">
+      <h1>Productos más buscados</h1>
+    </div>
+  </div>
+  <div class="row" style="margin-bottom:10px;">
+    <div class="col-md-12">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <tr>
+              <th scope="col">Título</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Vendidos</th>
+              <th scope="col">Palabras usadas para encontrarlo</th>
+              <th scope="col">Imagen</th>
+            </tr>
+          </tr>
+        </thead>
+        <tbody ng-show="productos.length > 0">
+            <tr ng-repeat="p in productos">
+              <th scope="row">{{p.titulo}}</th>
+              <td>{{p.descripcion}}</td>
+              <td>{{p.precio}}</td>
+              <td>{{p.vendidos}}</td>
+              <td>{{p.palabra}}</td>
+              <td><img ng-src="{{p.imagen}}" alt="" class="img-thumbnail"></td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+</div>
